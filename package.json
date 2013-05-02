@@ -1,0 +1,31 @@
+{
+  "name": "mcrio-scaffold",
+  "version": "0.0.1",
+  "description": "Set up projects with CoffeeScript and Mocha+Chai testing in one command",
+  "license": "MIT",
+
+  "author": "Felix Rabe",
+  "homepage": "http://mcr.io/scaffold",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcrio/scaffold.git"
+  },
+
+  "main": "./lib/scaffold.js",
+  "bin": "./lib/scaffold-cli.js",
+
+  "dependencies": {
+    "mkdirp": "*"
+  },
+
+  "devDependencies": {
+    "chai": "*",
+    "coffee-script": "*",
+    "mocha": "*"
+  },
+
+  "scripts": {
+    "prepublish": "cake build",
+    "test": "cake test"
+  }
+}
