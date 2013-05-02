@@ -15,7 +15,7 @@ This gives you the mcrio-scaffold command.
 Example
 -------
 
-    $ mcrio-scaffold new-project
+    $ mcrio-scaffold new-project 'A new project doing X'
     $ cd new-project
     $ npm test
 
