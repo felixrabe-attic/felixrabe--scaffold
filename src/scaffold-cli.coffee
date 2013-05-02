@@ -40,14 +40,15 @@ fs.writeFileSync 'test/test-helper.coffee',  templates.testhelper()
 fs.writeFileSync "test/#{p.name}.coffee",    templates.srcTest()
 fs.writeFileSync "src/#{p.name}.coffee",     templates.srcLib()
 fs.writeFileSync "src/#{p.name}-cli.coffee", templates.srcCli()
+fs.chmodSync     "src/#{p.name}-cli.coffee", 0o755
 
+console.log "Running 'npm install' ..."
 exec 'npm install', (err, output) ->
   throw err if err
   console.log output
 
   exec 'npm test', (err, output) ->
-    # throw err if err
-    console.log err
     console.log output
+    console.log err if err
 
-    console.log 'You got a failed test - have fun! ;-)'
+    console.log "You've got a failing test to fix - have fun! ;-)"

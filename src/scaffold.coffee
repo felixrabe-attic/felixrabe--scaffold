@@ -56,7 +56,7 @@ exports.templates = (project) ->
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 
-      """
+    """
 
   readme: ->
     """
@@ -167,18 +167,23 @@ exports.templates = (project) ->
 
       it 'should drive the implementation', ->
         should.exist tests  # TODO: this is expected to fail
+
     """
 
   srcLib: ->
     """
     exports.fn = (x) -> x * 2
+
     """
 
   srcCli: ->
     """
+    #!/usr/bin/env coffee
+
     {fn} = require './#{project.name}'
 
     console.log "5 doubled is \#{fn 5}"
+
     """
 
 
