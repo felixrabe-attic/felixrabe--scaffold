@@ -1,5 +1,9 @@
 #!/usr/bin/env coffee
 
+unless process.argv.length == 4
+  console.error "Usage: mcrio-scaffold new-project 'A new project doing X'"
+  process.exit 1
+
 fs = require 'fs'
 {exec} = require 'child_process'
 
