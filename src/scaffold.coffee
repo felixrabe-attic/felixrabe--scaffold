@@ -78,6 +78,12 @@ exports.templates = (project) ->
         ...
 
 
+    Develop
+    -------
+
+        $ npm test
+
+
     License
     -------
 
