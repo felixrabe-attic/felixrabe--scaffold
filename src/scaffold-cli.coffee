@@ -18,8 +18,8 @@ p =
 p =
   name: p.name
   description: p.description
-  year: '2013'
-  author: 'Felix Rabe'
+  year: '2014'
+  author: 'Felix Rabe <felix@rabe.io>'
   npmName: "mcrio-#{p.name}"
   homepage: "http://mcr.io/#{p.name}"
   github: "git://github.com/mcrio/#{p.name}.git"

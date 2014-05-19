@@ -3,6 +3,10 @@ mcrio-scaffold
 
 Set up projects with CoffeeScript and Mocha+Chai testing in one command.
 
+**WARNING:** This has been developed for internal use. You will have to modify
+`scaffold-cli.coffee` to your own liking. If you would like to see this get more
+flexible, drop me a line.
+
 
 Installation
 ------------
