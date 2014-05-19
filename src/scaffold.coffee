@@ -113,10 +113,10 @@ exports.templates = (project) ->
       },
 
       "devDependencies": {
-        "chai": "*",
-        "coffee-script": "*",
-        "mcrio-scaffold": "*",
-        "mocha": "*"
+        "chai": "^1.9.1",
+        "coffee-script": "^1.7.1",
+        "mcrio-scaffold": "^0.0.3",
+        "mocha": "^1.19.0"
       },
 
       "scripts": {
@@ -129,6 +129,7 @@ exports.templates = (project) ->
 
   cakefile: ->
     """
+    require 'coffee-script/register'
     require 'mcrio-scaffold'
 
     """
@@ -235,7 +236,7 @@ if 'task' of global
       ./node_modules/.bin/mocha
       --compilers coffee:coffee-script
       --reporter spec
-      --require coffee-script
+      --require coffee-script/register
       --require test/test-helper.coffee
       --colors
     ", (err, output) ->
